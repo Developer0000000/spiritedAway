@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <main class="flex h-full w-full bg-[url('spirited-away-house-2.jpg')] bg-cover">
+        <div class="image absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[50%]  z-[1040]">
+            <img class="w-screen h-screen md:h-screen object-cover" src="spirited-away-character.png" alt="">
+        </div>
+        <nav class="flex justify-end sm:justify-between absolute z-[1150] w-full p-6">
+            <ul class="sm:flex gap-5 text-sm lg:text-base hidden">
+                <li class="a">About Studio Ghibli</li>
+                <li class="a underline underline-offset-4 font-bold">Movie List</li>
+                <li class="a">Merchandise</li>
+            </ul>
+            <div id="menu_btn">
+                <i class="ri-menu-line text-2xl font-bold cursor-pointer a"></i>
+            </div>
+        </nav>
+        <section class="left w-full h-full absolute z-[1100]">
+            <div
+                class="center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:left-14 lg:left-20 xl:left-28 md:-translate-x-0">
+                <h5 class="a custom_font font-bold md:text-xl lg:text-2xl">2001</h5>
+                <h1 class="a custom_font main_text text-[8vw] leading-[7.5vw] md:text-[8vw] md:leading-[7.5vw]">
+                    Spirited
+                    <br class="md:block hidden"> Away
+                </h1>
+                <div class="left_btn mt-10 flex items-center flex-wrap gap-6 lg:gap-16">
+                    <button
+                        class="a btn bg-white px-6 rounded py-2.5 text-sm lg:text-base flex items-center shadow_effect">
+                        <i class="ri-play-fill text-2xl"></i>
+                        <span class="uppercase font-medium">watch trailer</span>
+                    </button>
+                    <span class="a">IMDB</span>
+                    <button class="a md:hidden text-white underline text-lg underline-offset-4 font-medium"
+                        id="details_btn">
+                        Details
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="right w-full h-full absolute z-[1020]">
+            <div
+                class="hidden md:block absolute bottom-1 left-1/2 md:top-[30%] xl:top-[40%] md:left-[60%] z-[1060] text-sm lg:text-base">
+                <p class="a lg:w-[75%] md:w-[85%] font-medium">
+                    Spirited Away tells the story of Chihiro Ogino (Hiiragi), a 10.year-old girl who, while moving to a
+                    new neighbourhocxl, enters the world of Kami (spirits) of Japanese Shinto folklore. After her
+                    parents are turned into pigs by the witch Yubaba (Natsuki), Chihiro takes a job working in Yubaba•s
+                    bathhouse to find a way to free herself and her parents and return to the human world.
+                </p>
+                <p class="mt-6 font-medium a"><span class="font-bold">Director:</span> Hayao Miyazaki</p>
+            </div>
+        </section>
+
+        <div id="details"
+            class="overflow-y-auto overflow-x-hidden fixed top-0 justify-center items-center w-full md:inset-0 opacity-0">
+            <div class="modal_width relative p-4 w-[85%] mx-auto">
+                <div class="relative bg-white rounded-lg shadow">
+                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                        <h3 class="text-xl font-semibold text-gray-700">
+                            Movie Details
+                        </h3>
+                        <button id="close_btn" type="button"
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center">
+                            <i class="ri-close-large-fill text-xl"></i>
+                        </button>
+                    </div>
+                    <div class="p-4 md:p-5 space-y-4">
+                        <p class="lg:w-[75%] md:w-[85%] font-medium">
+                            Spirited Away tells the story of Chihiro Ogino (Hiiragi), a 10.year-old girl who, while
+                            moving to a
+                            new neighbourhocxl, enters the world of Kami (spirits) of Japanese Shinto folklore. After
+                            her
+                            parents are turned into pigs by the witch Yubaba (Natsuki), Chihiro takes a job working in
+                            Yubaba•s
+                            bathhouse to find a way to free herself and her parents and return to the human world.
+                        </p>
+                        <hr>
+                        <p class="mt-6 font-medium"><span class="font-bold">Director:</span> Hayao Miyazaki</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <aside id="sidebar"
+            class="fixed top-0 -right-[100%] z-[1240] lg:w-[30%] h-screen transition-transform opacity-0">
+            <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
+                <div class="absolute right-6 top-7">
+                    <i id="close_sidebar_btn" class="ri-close-large-fill text-2xl cursor-pointer font-bold"></i>
+                </div>
+                <ul class="space-y-2 font-medium mt-20 text-2xl">
+                    <li>
+                        <a href="#"
+                            class="nav_link flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <i class="ri-home-line"></i>
+                            <span class="ms-3">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="nav_link flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <i class="ri-home-line"></i>
+                            <span class="ms-3">Movies List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="nav_link flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <i class="ri-home-line"></i>
+                            <span class="ms-3">About Studio Ghibli</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="nav_link flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <i class="ri-home-line"></i>
+                            <span class="ms-3">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div id="overly" class="fixed top-0 left-0 w-full h-full bg-black opacity-0"></div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
