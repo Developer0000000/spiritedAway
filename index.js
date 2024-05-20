@@ -1,3 +1,6 @@
+alert('Please, see this website in both fullscreen and mobile!')
+
+
 var mainTL = gsap.timeline();
 
 gsap.set(".image", { y: -30, opacity: 0 });
